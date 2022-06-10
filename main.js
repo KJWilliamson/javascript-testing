@@ -50,19 +50,6 @@
 //**************************************************************************** */
 
 
-class User {
-    firstName;
-    lastName;
-    middleName;
-
-
-    constructor(data = {}){
-        this.firstName = data.firstName || '';
-        this.lastName = data.lastName || '';
-        this.middleName = data.middleName || '';
-    }
-}
-
 // TEST SUITE
 // NEED A WAY TO GROUP TESTS
 // testing a single thing User
