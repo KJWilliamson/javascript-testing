@@ -52,43 +52,46 @@
 // NEED A WAY TO GROUP TESTS
 // testing a single thing User
 describe(`${User.name} Class`, () => {
-    //first test case. write from user focus
+    describe('default values', () => {
+        //first test case. write from user focus
     //arrange, act, assert
-    it('first name defaults to empty', () => {
-        //setting up state of application
-        //arrange
-        const data = { firstName: null }
+        it('first name defaults to empty', () => {
+            //setting up state of application
+            //arrange
+            const data = { firstName: null }
 
-        //act
-        //within act typically testing 1 of 5 things. model, service, component, directive, 
-        //or pipe so call it that
-        const model = new User(data);
+            //act
+            //within act typically testing 1 of 5 things. model, service, component, directive, 
+            //or pipe so call it that
+            const model = new User(data);
 
-        //assert. it's what i expect the test to do
-        //expect that value to equal an empty string
-        expect(model.firstName).toBe('')
+            //assert. it's what i expect the test to do
+            //expect that value to equal an empty string
+            expect(model.firstName).toBe('')
+        });
+
+        it('last name defaults to empty', () => {
+            //arrange
+            const data = { lastName: null }
+
+            //act
+            const model = new User(data);
+
+            //assert
+            expect(model.lastName).toBe('')
+        });
+
+        it('middle name defaults to empty', () => {
+            //arrange
+            const data = { middleName: null }
+
+            //act
+            const model = new User(data);
+
+            //assert
+            expect(model.middleName).toBe('')
+        });
+    });
     });
 
-    it('last name defaults to empty', () => {
-        //arrange
-        const data = { lastName: null }
-
-        //act
-        const model = new User(data);
-
-        //assert
-        expect(model.lastName).toBe('')
-    });
-
-    it('middle name defaults to empty', () => {
-        //arrange
-        const data = { middleName: null }
-
-        //act
-        const model = new User(data);
-
-        //assert
-        expect(model.middleName).toBe('')
-    });
-});
 
